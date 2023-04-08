@@ -19,17 +19,23 @@ code {
   cursor: pointer;
 }
 
-h1{
+h1, h4, p{
   text-align: center;
 }
 
 nav{
-  display: flex;
-  width: 80vw;
-  justify-content: flex-start;
+  background-color: rgb(189, 220, 253);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   padding: 1rem;
 }
 
+.navegacion{
+  width: 30rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+ 
+}
 a{
   color: #000;
   text-decoration: none;
@@ -40,27 +46,69 @@ a:hover{
   color: rgb(136, 136, 136);
 } 
 
+.button-toggle{
+  cursor: pointer;
+  height: 40px;
+  border-radius: 30px;
+  border: none;
+  margin-top: 17px;
+  background-color: midnightblue;
+}
+.img{
+  width: 200px;
+  height: 200px;
+}
 footer {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   text-align: center;
   padding: 2rem;
   position: relative;
   bottom: 0;
-  width: 90%;
-  height: 40px;
-  margin-top: 2rem;
+  width: 95%;
+  height: 124px;
+  margin-top: 4rem;
+  background-color: rgb(133, 173, 236);
+}
+
+.logo-dh{
+  width: 400px;
+  height: 100px;
+}
+
+.redes-sociales{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+  gap: 30px;
+  margin-top: 60px;
+}
+.redes-sociales img{
+  width: 30px;
+  height: 30px;
 }
 
 footer > img{
   width: 200px;
   margin: 0;
 }
-footer > p{
+.powered{
   margin: 0;
   padding-top: 0.7rem;
+  font-size: 28px;
+
 }
 
+.contact{
+  text-align: center;
+  margin-top: 40px;
+  height: 400px;
+}
+
+.contact h2, p{
+  margin-top: 40px;
+}
 form{
   display: flex;
   flex-direction: column;
@@ -70,6 +118,23 @@ form{
   margin: 0 auto;
 }
 
+form div{
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.button-enviar{
+  margin-top: 30px;
+  background-color: #453e91;
+  color: white;
+  text-align: 40px;
+  font-weight: bold;
+  border-radius: 30px;
+  border: none;
+}
+.info-contac{
+  margin-bottom: 60px;
+}
 .card{
   display: flex;
   justify-content: space-around;
@@ -78,14 +143,17 @@ form{
   width: 200px;
   padding: 0.5rem 0.5rem 0 0.5rem;
   border: 0.5px solid rgb(136, 136, 136);
+  margin-top: 30px;
 }
+
 
 .card:hover{
   border: 0.5px solid rgb(206, 217, 142);
 }
 
 .card-grid{
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   justify-content: space-evenly;
   gap: 1rem;
   width: 90vw;
@@ -113,10 +181,58 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
-.dark{
-  background-color: #12121296;
-  color: white;
+.dark-theme {
+  background-color: #4b4b4b;
+  color: #fff;
 }
-.dark > a {
-  color: white;
+
+.dark-theme nav {
+  background-color: #231e56;
+  color: #fff;
+}
+
+.dark-theme footer{
+  background-color: #231e56;
+  color: #fff;
+}
+
+
+.dark-theme .card {
+  background-color: #3a3a3a;
+  color: #fff;
+}
+
+.dark-theme .card:hover {
+  background-color: #4a4a4a;
+}
+
+.dark-theme .card h2 {
+  color: #fff;
+}
+
+.dark-theme .card h3 {
+  color: #b7b7b7;
+}
+
+.dark-theme button {
+  background-color: #b7b7b7;
+  color: #1e1e1e;
+}
+
+.dark-theme .button-toggle{
+  visibility: hidden;
+}
+.dark-theme .button-toggle::before{
+  content: "🔆"; 
+  visibility: visible;
+  background-color: #fff;
+ cursor: pointer;
+  
+}
+.dark-theme button:hover {
+  background-color: #d7d7d7;
+}
+
+.dark-theme a {
+  color: #fff;
 }
